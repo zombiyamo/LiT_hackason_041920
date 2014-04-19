@@ -18,7 +18,12 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.title =@"About Menter";
-    topData = [NSArray arrayWithObjects:@"おまってぃーさん",@"しょうさま",@"みっちー",@"あんとに",@"ゆーぱん",@"りょーちん",nil];
+    topData = [NSArray arrayWithObjects:@"おまってぃーさん",@"しょうさま",@"みっちー",@"あんとに",@"ゆーぱん",@"りょーちん",@"たけさん",@"みやも",@"さぬイカ",nil];
+    //連想配列の値となる配列「eSeasons」を生成
+    NSArray *eSeasons = [NSArray arrayWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9", nil];
+    
+    //辞書オブジェクト「myDic」を生成
+    NSDictionary *myDic = [[NSDictionary alloc]initWithObjects:eSeasons forKeys:topData];
     
 
 }
@@ -87,23 +92,38 @@
                                 @"NextA_NavigationController",
                                 @"NextB_ViewController",
                                 nil];
-    //押されたセルの番地が０だったら実行
-    if(indexPath.row == 0)
-    {
-        //NextAをインスタンス化して、Storyborard IDがtransitionArray[0]（NextA_ViewController）の場所に移動する。
-        NextA_NavigationController *nextA_NavigationController = [self.storyboard instantiateViewControllerWithIdentifier:transitionArray[indexPath.row]];
-        //push型の遷移で移動する。
-        [self.navigationController pushViewController:nextA_NavigationController animated:YES];
-//        NSURL *url = [NSURL URLWithString:@"http://blog.syuhari.jp/archives/1512"];
+    //NextAをインスタンス化して、Storyborard IDがtransitionArray[0]（NextA_ViewController）の場所に移動する。
+    NextA_NavigationController *nextA_NavigationController = [self.storyboard instantiateViewControllerWithIdentifier:transitionArray[indexPath.row]];
+    //push型の遷移で移動する。
+    [self.navigationController pushViewController:nextA_NavigationController animated:YES];
+    //押されたセルの番地が１だったら実行
+    int userID = indexPath.row+1;
+    NSString *userIDString = [NSString stringWithFormat:@"%d",userID];
+    NSURL *url = [NSURL URLWithString:@"http://omatty198.github.io/LiTprofile/%@",userIDString];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [self.webView loadRequest:request];
+
+    
+//    //押されたセルの番地が０だったら実行
+//    if(indexPath.row == 0)
+//    {
+//        //NextAをインスタンス化して、Storyborard IDがtransitionArray[0]（NextA_ViewController）の場所に移動する。
+//        NextA_NavigationController *nextA_NavigationController = [self.storyboard instantiateViewControllerWithIdentifier:transitionArray[indexPath.row]];
+//        //push型の遷移で移動する。
+//        [self.navigationController pushViewController:nextA_NavigationController animated:YES];
+//        //押されたセルの番地が１だったら実行
+//        
+//        NSURL *url = [NSURL URLWithString:@"http://omatty198.github.io/LiTprofile/"];
 //        NSURLRequest *request = [NSURLRequest requestWithURL:url];
 //        [self.webView loadRequest:request];
-
-        
-        //押されたセルの番地が１だったら実行
-    }else if(indexPath.row == 1){
-        NextB_ViewController *nextB_ViewController = [self.storyboard instantiateViewControllerWithIdentifier:transitionArray[indexPath.row]];
-        [self.navigationController pushViewController:nextB_ViewController animated:YES];
-    }
+//        
+//    }else if(indexPath.row == 1){
+//        
+//        NextA_NavigationController *nextA_NavigationController = [self.storyboard instantiateViewControllerWithIdentifier:transitionArray[indexPath.row]];
+//        //push型の遷移で移動する。
+//        [self.navigationController pushViewController:nextA_NavigationController animated:YES];
+//        //押されたセルの番地が１だったら実行
+//    }
 }
 
 - (void)didReceiveMemoryWarning
