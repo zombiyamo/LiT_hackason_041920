@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  NextA_NavigationController.h
 //  Navigation
 //
 //  Created by miyamoto haruna on 2014/02/08.
@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NextA_NavigationController.h"
 
-@interface ViewController : UIViewController
+@interface NextA_NavigationController : UITableViewController
+
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 @end
