@@ -14,10 +14,10 @@
 {
     [super viewDidLoad];
 
-    NSURL *url = [NSURL URLWithString:@"http://omatty198.github.io/LiTprofile/"];
-         NSURLRequest *request = [NSURLRequest requestWithURL:url];
-        [self.webView loadRequest:request];
-
+//    NSURL *url = [NSURL URLWithString:@"http://omatty198.github.io/LiTprofile/"];
+//         NSURLRequest *request = [NSURLRequest requestWithURL:url];
+//        [self.webView loadRequest:request];
+//
     
 }
 

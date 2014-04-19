@@ -99,7 +99,10 @@
     //押されたセルの番地が１だったら実行
     int userID = indexPath.row+1;
     NSString *userIDString = [NSString stringWithFormat:@"%d",userID];
-    NSURL *url = [NSURL URLWithString:@"http://omatty198.github.io/LiTprofile/%@",userIDString];
+    NSMutableString *urlString = [NSMutableString string];
+    [urlString appendString:@"http://omatty198.github.io/LiTprofile/"];
+    [urlString appendString:userIDString];
+    NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:request];
 
