@@ -17,7 +17,7 @@
     [super viewDidLoad];
     AppDelegate* appDelegate = [[UIApplication sharedApplication] delegate];
     NSString* itemStr = [appDelegate.toyBox objectForKey:@"ゆーざー"];
-    NSLog(@"お宝：%@",itemStr);
+    NSLog(@"%@",itemStr);
         NSURL *url = [NSURL URLWithString:itemStr];
         NSURLRequest *request = [NSURLRequest requestWithURL:url];
         [self.webView loadRequest:request];
@@ -25,10 +25,10 @@
     
     
 }
-- (IBAction)return:(UIStoryboardSegue *)segue
-{
-    //もし戻ってきた時にやりたい処理があれば書く。なければナシのままで。
-}
+//- (IBAction)return:(UIStoryboardSegue *)segue
+//{
+//    //もし戻ってきた時にやりたい処理があれば書く。なければナシのままで。
+//}
 
 
 @end

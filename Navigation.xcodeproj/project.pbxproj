@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B119CB691903B3250051563F /* cheekfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B119CB681903B3250051563F /* cheekfont.ttf */; };
 		B1236F2B19036111008B75A5 /* NextB_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1236F2A19036111008B75A5 /* NextB_ViewController.m */; };
 		B1E7837018A64E2000637981 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1E7836F18A64E2000637981 /* Foundation.framework */; };
 		B1E7837218A64E2000637981 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1E7837118A64E2000637981 /* CoreGraphics.framework */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B119CB681903B3250051563F /* cheekfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = cheekfont.ttf; sourceTree = "<group>"; };
 		B1236F2919036111008B75A5 /* NextB_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextB_ViewController.h; sourceTree = "<group>"; };
 		B1236F2A19036111008B75A5 /* NextB_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextB_ViewController.m; sourceTree = "<group>"; };
 		B1E7836C18A64E2000637981 /* Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +136,7 @@
 				B1236F2A19036111008B75A5 /* NextB_ViewController.m */,
 				B1E783AA18A64F5800637981 /* OnlineTableViewController.h */,
 				B1E783AB18A64F5800637981 /* OnlineTableViewController.m */,
+				B119CB681903B3250051563F /* cheekfont.ttf */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B119CB691903B3250051563F /* cheekfont.ttf in Resources */,
 				B1E7838818A64E2000637981 /* Images.xcassets in Resources */,
 				B1E7837A18A64E2000637981 /* InfoPlist.strings in Resources */,
 				B1E7838318A64E2000637981 /* Main.storyboard in Resources */,

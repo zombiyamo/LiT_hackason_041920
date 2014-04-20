@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NextA_NavigationController.h"
+
 
 @interface OnlineTableViewController : UITableViewController
 {

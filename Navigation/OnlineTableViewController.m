@@ -20,14 +20,17 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.title =@"About Menter";
-    topData = [NSArray arrayWithObjects:@"おまってぃーさん",@"しょうさま",@"みっちー",@"あんとに",@"ゆーぱん",@"りょーちん",@"たけさん",@"みやも",@"さぬイカ",nil];
+    topData = [NSArray arrayWithObjects:@"おまってぃーさん",@"しょうさま",@"みっちー",@"あんとに",@"ゆーぱん",@"りょーちん",@"たけさん",@"みやも",@"イカ",nil];
+    
+
     //連想配列の値となる配列「eSeasons」を生成
     NSArray *eSeasons = [NSArray arrayWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9", nil];
     
     //辞書オブジェクト「myDic」を生成
     NSDictionary *myDic = [[NSDictionary alloc]initWithObjects:eSeasons forKeys:topData];
     
-
+    
+   
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -38,41 +41,8 @@
 {
     return topData.count;
 }
-//
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    static NSString *CellIdentifier = @"Cell";
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-//    if (cell == nil) {
-//        cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
-//        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-//    }
-//    
-//    // Set up the cell...
-//    NSString	*string = @"Go to CS193p website";
-//    
-//    CGRect frame = cell.contentView.bounds;
-//    frame = CGRectInset(frame, 10, 1);
-//    UIWebView *webView = [[UIWebView alloc] initWithFrame:frame];
-//    [webView loadHTMLString:string baseURL:nil];
-//    webView.delegate = self;
-//    [cell.contentView addSubview:webView];
-//    
-//    return cell;
-//}
 
-//- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
-//    if (navigationType == UIWebViewNavigationTypeLinkClicked)
-//    {
-//        webview = [[UIWebView alloc] init];
-//        webview.url = request.URL;
-//        [self.navigationController pushViewController:webview animated:YES];
-//        [webview release];
-//        
-//        return NO;
-//    }
-//    return YES;
-//}
-
+//セルが押された時
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
@@ -81,7 +51,9 @@
     if (cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
+    
     cell.textLabel.text = [topData objectAtIndex:indexPath.row];
+    cell.textLabel.font = [UIFont fontWithName:@"CheekFont" size:20.0];
     
     return cell;
 }
@@ -89,50 +61,19 @@
 {
     NSLog(@"押されたセル：%d",indexPath.row);
     
-    //遷移先のStoryboard IDを記述
-    NSArray *transitionArray = [NSArray arrayWithObjects:
-                                @"NextA_NavigationController",@"NextA_NavigationController",@"NextA_NavigationController",@"NextA_NavigationController",@"NextA_NavigationController", nil];
-    //NextAをインスタンス化して、Storyborard IDがtransitionArray[0]（NextA_ViewController）の場所に移動する。
-    NextA_NavigationController *nextA_NavigationController = [self.storyboard instantiateViewControllerWithIdentifier:transitionArray[indexPath.row]];
-    //push型の遷移で移動する。
-    [self.navigationController pushViewController:nextA_NavigationController animated:YES];
-    //押されたセルの番地が１だったら実行
- 
-    int userID = indexPath.row+1;
-   _userIDString = [NSString stringWithFormat:@"http://omatty198.github.io/LiTprofile/%d.html",userID];
-//    NSLog(@"%@",_userIDString);
-//    NSMutableString *urlString = [NSMutableString string];
-//    [urlString appendString:@"http://omatty198.github.io/%d.html/"];
-//    [urlString appendString:userIDString];
-//    NSString *userIDString = [NSString stringWithFormat:@"%d",userID];
-//    NSMutableString *urlString = [NSMutableString string];
-//    [urlString appendString:@"http://omatty198.github.io/LiTprofile/"];
-//    [urlString appendString:userIDString];
-//    NSURL *url = [NSURL URLWithString:_userIDString];
-//    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-//    [self.webView loadRequest:request];
-  AppDelegate* appDelegate = [[UIApplication sharedApplication] delegate];
+       int userID = indexPath.row+1;
+    _userIDString = [NSString stringWithFormat:@"http://omatty198.github.io/LiTprofile/%d.html",userID];
+    AppDelegate* appDelegate = [[UIApplication sharedApplication] delegate];
     [appDelegate.toyBox setObject:_userIDString forKey:@"ゆーざー"];
        
-//    if(indexPath.row == 0)
-//    {
-//        //NextAをインスタンス化して、Storyborard IDがtransitionArray[0]（NextA_ViewController）の場所に移動する。
-//        NextA_NavigationController *nextA_NavigationController = [self.storyboard instantiateViewControllerWithIdentifier:transitionArray[indexPath.row]];
-//        //push型の遷移で移動する。
-//        [self.navigationController pushViewController:nextA_NavigationController animated:YES];
-//        //押されたセルの番地が１だったら実行
-////        
-//        NSURL *url = [NSURL URLWithString:@"http://omatty198.github.io/LiTprofile/"];
-//        NSURLRequest *request = [NSURLRequest requestWithURL:url];
-//        [self.webView loadRequest:request];
-//        
-//    }else if(indexPath.row == 1){
-//        
-//        NextA_NavigationController *nextA_NavigationController = [self.storyboard instantiateViewControllerWithIdentifier:transitionArray[indexPath.row]];
-//        //push型の遷移で移動する。
-//        [self.navigationController pushViewController:nextA_NavigationController animated:YES];
-//        //押されたセルの番地が１だったら実行
-//    }
+    [super didReceiveMemoryWarning];
+    
+    NextA_NavigationController *secondVC = [self.storyboard instantiateViewControllerWithIdentifier:@"NextA_NavigationController"];
+//    secondVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve; //ふわっと
+//    secondVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;//回転
+//    secondVC.modalTransitionStyle = UIModalTransitionStylePartialCurl;//めくってるやつ
+//     [self presentViewController:secondVC animated:YES completion:nil];
+    [self.navigationController pushViewController:secondVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
