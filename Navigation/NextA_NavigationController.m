@@ -7,6 +7,8 @@
 //
 
 #import "NextA_NavigationController.h"
+#import "OnlineTableViewController.h"
+
 
 @implementation NextA_NavigationController
 
@@ -19,6 +21,10 @@
 //        [self.webView loadRequest:request];
 //
     
+}
+- (IBAction)return:(UIStoryboardSegue *)segue
+{
+    //もし戻ってきた時にやりたい処理があれば書く。なければナシのままで。
 }
 
 

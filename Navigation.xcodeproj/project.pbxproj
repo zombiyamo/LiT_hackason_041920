@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B1236F2B19036111008B75A5 /* NextB_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1236F2A19036111008B75A5 /* NextB_ViewController.m */; };
 		B1E7837018A64E2000637981 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1E7836F18A64E2000637981 /* Foundation.framework */; };
 		B1E7837218A64E2000637981 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1E7837118A64E2000637981 /* CoreGraphics.framework */; };
 		B1E7837418A64E2000637981 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1E7837318A64E2000637981 /* UIKit.framework */; };
@@ -22,7 +23,6 @@
 		B1E7839918A64E2000637981 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B1E7839718A64E2000637981 /* InfoPlist.strings */; };
 		B1E7839B18A64E2000637981 /* NavigationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E7839A18A64E2000637981 /* NavigationTests.m */; };
 		B1E783A618A64EFA00637981 /* NextA_NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E783A518A64EFA00637981 /* NextA_NavigationController.m */; };
-		B1E783A918A64F1600637981 /* NextB_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E783A818A64F1600637981 /* NextB_ViewController.m */; };
 		B1E783AC18A64F5800637981 /* OnlineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E783AB18A64F5800637981 /* OnlineTableViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B1236F2919036111008B75A5 /* NextB_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextB_ViewController.h; sourceTree = "<group>"; };
+		B1236F2A19036111008B75A5 /* NextB_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextB_ViewController.m; sourceTree = "<group>"; };
 		B1E7836C18A64E2000637981 /* Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1E7836F18A64E2000637981 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B1E7837118A64E2000637981 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -58,8 +60,6 @@
 		B1E7839A18A64E2000637981 /* NavigationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationTests.m; sourceTree = "<group>"; };
 		B1E783A418A64EFA00637981 /* NextA_NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextA_NavigationController.h; sourceTree = "<group>"; };
 		B1E783A518A64EFA00637981 /* NextA_NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextA_NavigationController.m; sourceTree = "<group>"; };
-		B1E783A718A64F1600637981 /* NextB_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextB_ViewController.h; sourceTree = "<group>"; };
-		B1E783A818A64F1600637981 /* NextB_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextB_ViewController.m; sourceTree = "<group>"; };
 		B1E783AA18A64F5800637981 /* OnlineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlineTableViewController.h; sourceTree = "<group>"; };
 		B1E783AB18A64F5800637981 /* OnlineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnlineTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,8 +130,8 @@
 				B1E7837618A64E2000637981 /* Supporting Files */,
 				B1E783A418A64EFA00637981 /* NextA_NavigationController.h */,
 				B1E783A518A64EFA00637981 /* NextA_NavigationController.m */,
-				B1E783A718A64F1600637981 /* NextB_ViewController.h */,
-				B1E783A818A64F1600637981 /* NextB_ViewController.m */,
+				B1236F2919036111008B75A5 /* NextB_ViewController.h */,
+				B1236F2A19036111008B75A5 /* NextB_ViewController.m */,
 				B1E783AA18A64F5800637981 /* OnlineTableViewController.h */,
 				B1E783AB18A64F5800637981 /* OnlineTableViewController.m */,
 			);
@@ -265,10 +265,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1E7838618A64E2000637981 /* ViewController.m in Sources */,
-				B1E783A918A64F1600637981 /* NextB_ViewController.m in Sources */,
 				B1E783AC18A64F5800637981 /* OnlineTableViewController.m in Sources */,
 				B1E7838018A64E2000637981 /* AppDelegate.m in Sources */,
 				B1E783A618A64EFA00637981 /* NextA_NavigationController.m in Sources */,
+				B1236F2B19036111008B75A5 /* NextB_ViewController.m in Sources */,
 				B1E7837C18A64E2000637981 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,6 +478,7 @@
 				B1E783A018A64E2000637981 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B1E783A118A64E2000637981 /* Build configuration list for PBXNativeTarget "NavigationTests" */ = {
 			isa = XCConfigurationList;
@@ -486,6 +487,7 @@
 				B1E783A318A64E2000637981 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

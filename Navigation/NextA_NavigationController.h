@@ -11,5 +11,6 @@
 @interface NextA_NavigationController : UITableViewController
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
+- (IBAction)return:(UIStoryboardSegue *)segue;
 
 @end

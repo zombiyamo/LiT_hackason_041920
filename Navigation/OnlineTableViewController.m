@@ -89,14 +89,13 @@
     
     //遷移先のStoryboard IDを記述
     NSArray *transitionArray = [NSArray arrayWithObjects:
-                                @"NextA_NavigationController",
-                                @"NextB_ViewController",
-                                nil];
+                                @"NextA_NavigationController",@"NextA_NavigationController",@"NextA_NavigationController",@"NextA_NavigationController",@"NextA_NavigationController", nil];
     //NextAをインスタンス化して、Storyborard IDがtransitionArray[0]（NextA_ViewController）の場所に移動する。
     NextA_NavigationController *nextA_NavigationController = [self.storyboard instantiateViewControllerWithIdentifier:transitionArray[indexPath.row]];
     //push型の遷移で移動する。
     [self.navigationController pushViewController:nextA_NavigationController animated:YES];
     //押されたセルの番地が１だったら実行
+ 
     int userID = indexPath.row+1;
     NSString *userIDString = [NSString stringWithFormat:@"%d",userID];
     NSMutableString *urlString = [NSMutableString string];
@@ -115,7 +114,7 @@
 //        //push型の遷移で移動する。
 //        [self.navigationController pushViewController:nextA_NavigationController animated:YES];
 //        //押されたセルの番地が１だったら実行
-//        
+////        
 //        NSURL *url = [NSURL URLWithString:@"http://omatty198.github.io/LiTprofile/"];
 //        NSURLRequest *request = [NSURLRequest requestWithURL:url];
 //        [self.webView loadRequest:request];

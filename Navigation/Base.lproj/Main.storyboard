@@ -32,34 +32,6 @@
             </objects>
             <point key="canvasLocation" x="618" y="10"/>
         </scene>
-        <!--NextB View Controller-->
-        <scene sceneID="OyQ-Se-4Vw">
-            <objects>
-                <tableViewController storyboardIdentifier="NextB_ViewController" id="bF4-rc-2kp" customClass="NextB_ViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Mdf-8I-s2Z">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="I02-21-pVr">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I02-21-pVr" id="Y5L-x4-IvK">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="bF4-rc-2kp" id="S1K-fo-VhC"/>
-                            <outlet property="delegate" destination="bF4-rc-2kp" id="OgG-cR-IhI"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kWJ-vF-dJA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="998" y="892"/>
-        </scene>
         <!--NextA Navigation Controller-->
         <scene sceneID="euV-fB-hmS">
             <objects>
@@ -69,7 +41,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <webView key="tableFooterView" contentMode="scaleToFill" id="dUI-cd-e5D">
-                            <rect key="frame" x="0.0" y="66" width="320" height="501"/>
+                            <rect key="frame" x="0.0" y="66" width="320" height="458"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </webView>
@@ -88,6 +60,11 @@
                             <outlet property="delegate" destination="Jry-Df-Iua" id="aX9-5A-gTY"/>
                         </connections>
                     </tableView>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="qUX-nF-JPC"/>
+                        <barButtonItem id="Ies-WA-mZb"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="webView" destination="dUI-cd-e5D" id="5iG-YO-Von"/>
                     </connections>
