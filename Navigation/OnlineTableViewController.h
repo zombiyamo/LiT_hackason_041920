@@ -10,9 +10,10 @@
 
 @interface OnlineTableViewController : UITableViewController
 {
-    
+    NSString *_userIDString;
       NSArray *topData;
     }
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (nonatomic,retain)NSString *userIDString;
 
 @end

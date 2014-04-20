@@ -23,6 +23,7 @@
                             </tableViewCell>
                         </prototypes>
                         <connections>
+                            <outlet property="dataSource" destination="8jK-Jo-TSA" id="ZD2-Na-dtK"/>
                             <outlet property="delegate" destination="8jK-Jo-TSA" id="CDA-tE-gj6"/>
                         </connections>
                     </tableView>
@@ -55,10 +56,6 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="Jry-Df-Iua" id="VC2-Y3-jsY"/>
-                            <outlet property="delegate" destination="Jry-Df-Iua" id="aX9-5A-gTY"/>
-                        </connections>
                     </tableView>
                     <toolbarItems>
                         <barButtonItem title="Item" id="qUX-nF-JPC"/>
@@ -66,12 +63,12 @@
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="webView" destination="dUI-cd-e5D" id="5iG-YO-Von"/>
+                        <outlet property="webView" destination="dUI-cd-e5D" id="b6s-Ga-xbp"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oIa-JB-AQ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="974" y="253"/>
+            <point key="canvasLocation" x="1010" y="10"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WUf-xw-n0u">

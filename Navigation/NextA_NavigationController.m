@@ -5,7 +5,7 @@
 //  Created by miyamoto haruna on 2014/02/08.
 //  Copyright (c) 2014年 miyamoto haruna. All rights reserved.
 //
-
+#import "AppDelegate.h"
 #import "NextA_NavigationController.h"
 #import "OnlineTableViewController.h"
 
@@ -15,11 +15,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-//    NSURL *url = [NSURL URLWithString:@"http://omatty198.github.io/LiTprofile/"];
-//         NSURLRequest *request = [NSURLRequest requestWithURL:url];
-//        [self.webView loadRequest:request];
-//
+    AppDelegate* appDelegate = [[UIApplication sharedApplication] delegate];
+    NSString* itemStr = [appDelegate.toyBox objectForKey:@"ゆーざー"];
+    NSLog(@"お宝：%@",itemStr);
+        NSURL *url = [NSURL URLWithString:itemStr];
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+        [self.webView loadRequest:request];
+    
+    
     
 }
 - (IBAction)return:(UIStoryboardSegue *)segue

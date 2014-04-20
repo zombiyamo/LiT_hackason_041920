@@ -12,6 +12,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+     self.toyBox = [[NSMutableDictionary alloc] init]; // お片づけ箱を確保
     // Override point for customization after application launch.
     return YES;
 }

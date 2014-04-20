@@ -8,8 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>{
+
+    NSMutableArray *toyBox;//ここになんでもしまっていいよ！！！！！！！
+
+}
 
 @property (strong, nonatomic) UIWindow *window;
+@property(strong,nonatomic) NSMutableDictionary*toyBox;
+@property (strong, nonatomic) UITableViewController *OnlineTableViewController;
+@property (strong, nonatomic) UITableViewController *NextA_NavigationController;
+
 
 @end

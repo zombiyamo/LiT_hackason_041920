@@ -5,13 +5,15 @@
 //  Created by miyamoto haruna on 2014/02/08.
 //  Copyright (c) 2014年 miyamoto haruna. All rights reserved.
 //
-
+#import "AppDelegate.h"
 #import "OnlineTableViewController.h"
 #import "NextA_NavigationController.h"
 #import "NextB_ViewController.h"
 
 
 @implementation OnlineTableViewController
+
+@synthesize userIDString = _userIDString;
 
 - (void)viewDidLoad
 {
@@ -97,16 +99,21 @@
     //押されたセルの番地が１だったら実行
  
     int userID = indexPath.row+1;
-    NSString *userIDString = [NSString stringWithFormat:@"%d",userID];
-    NSMutableString *urlString = [NSMutableString string];
-    [urlString appendString:@"http://omatty198.github.io/LiTprofile/"];
-    [urlString appendString:userIDString];
-    NSURL *url = [NSURL URLWithString:urlString];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    [self.webView loadRequest:request];
-
-    
-//    //押されたセルの番地が０だったら実行
+   _userIDString = [NSString stringWithFormat:@"http://omatty198.github.io/LiTprofile/%d.html",userID];
+//    NSLog(@"%@",_userIDString);
+//    NSMutableString *urlString = [NSMutableString string];
+//    [urlString appendString:@"http://omatty198.github.io/%d.html/"];
+//    [urlString appendString:userIDString];
+//    NSString *userIDString = [NSString stringWithFormat:@"%d",userID];
+//    NSMutableString *urlString = [NSMutableString string];
+//    [urlString appendString:@"http://omatty198.github.io/LiTprofile/"];
+//    [urlString appendString:userIDString];
+//    NSURL *url = [NSURL URLWithString:_userIDString];
+//    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+//    [self.webView loadRequest:request];
+  AppDelegate* appDelegate = [[UIApplication sharedApplication] delegate];
+    [appDelegate.toyBox setObject:_userIDString forKey:@"ゆーざー"];
+       
 //    if(indexPath.row == 0)
 //    {
 //        //NextAをインスタンス化して、Storyborard IDがtransitionArray[0]（NextA_ViewController）の場所に移動する。
